@@ -1,11 +1,7 @@
 html {
-
     box-sizing: border-box;
     --bgColorMenu : #1d1d27;
     --duration: .7s;  
-
-    /* --timeOut: .5s;   */
-
 }
 
 html *,
@@ -21,8 +17,6 @@ body{
     margin: 0;
     display: flex;
     height: 100vh;
-    /* align-items: center;
-    justify-content: center; */
     background-color: #ffb457;
     transition: background-color var(--duration);
 
@@ -33,10 +27,9 @@ body{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    /* Works well with 100% width  */
-    width: 150px;
+    width: 85px;
     font-size: 1.5em;
-    padding: 0 2.85em;
+    padding:  10px 45px;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -45,7 +38,6 @@ body{
 }
 
 .menu__item{
-    
     all: unset;
     flex-grow: 1;
     display: flex;
@@ -58,19 +50,29 @@ body{
     
 }
 
-/* .menu__item::before{
-    
+
+
+.menu__item::before{
+   
     content: "";
+    
+    margin-top: -10px;
+    margin-left: -7px;
     z-index: -1;
-    width: 4.2em;
-    height: 4.2em;
+    width: 0.5em;
+    height: 0.5em;
     border-radius: 50%;
     position: absolute;
-    transform: scale(0);
-    transition: background-color var(--duration), transform var(--duration);
+    transform: scale(1);
+    transition: var(--duration), transform var(--duration);
     
-} */
+}
 
+.menu__item.active::before{
+    transform: scale(5.4);
+    background-color: var(--bgColorItem);
+
+}
 
 .menu__item.active {
 
@@ -78,12 +80,7 @@ body{
 
 }
 
-.menu__item.active::before{
-    
-    transform: scale(5);
-    background-color: var(--bgColorItem);
 
-}
 
 .icon{
     
@@ -93,10 +90,10 @@ body{
     fill: transparent;
     stroke-width: 1pt;
     stroke-dasharray: 400;
-
-    /* stroke-miterlimit: 10; */
-    /* stroke-linecap: round; */
-    /* stroke-linejoin: round; */
+    
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     
 }
 
@@ -115,5 +112,10 @@ body{
     }
 
 }
+
+
+/* ///////////////////////////////// */
+
+
 
 
